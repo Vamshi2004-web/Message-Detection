@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="forum.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Forum</title>
+</head>
+
+<body>
+    <div class="nav" id="nav">
+        <h2>Discussion Forum</h2>
+    </div>
+    <div class="container" id="container">
+        <div class="questionspart" id="questionspart">
+            <div class="btn-div" id="btn-div">
+                <input type="submit" value="New Question" id="newquestions" />
+                <input type="text" placeholder="search questions" id="searchbar" />
+            </div>
+            <div class="questions" id="questions">
+            </div>
+        </div>
+        <div class="forms">
+            <form method="POST" id="discussion-form">
+                <div class="submit-div" id="submit-div">
+                    <h1>Welcome to Discussion Forum!</h1>
+                    <p>Enter a subject and question to get started</p>
+                    <input type="text" placeholder="Title" id='question-title' /> <a id="error">
+                        < Title can't be empty !</a><br />
+                    <textarea type="text" placeholder="Description" rows="10" cols="100" id="description-input"></textarea><br />
+                    <button type="button" id="submit-question" onclick="sub()">Submit</button>
+                </div>
+            </form>
+            <div class="resolve-div" id="resolve-div">
+                <h3 style="padding-top: 5%;">Question</h3>
+                <div class="ques-div" id="ques-div">
+                    <h2 id="qd-title">Title</h2>
+                    <br />
+                    <p id="qd-desc">Description</p>
+                </div>
+                <button type="button" id="resolve-btn">Comment</button>
+                <div class="response-div" id="response-div">
+                    <h3>Comments</h3>
+                </div>
+                <div class="resolve-form" id="resolve-form">
+                    <h3 style="margin-bottom: 1%;"> Add Response</h3>
+                    <input type="text" placeholder="Enter name" id="entername" /><br />
+                    <textarea placeholder="Solution" rows="10" cols="100" id="entersol"></textarea><br />
+                    <button type="button" id="postans">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="forum.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Message Report </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: #fff;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .form-section {
+            margin: 20px 0;
+        }
+        .form-section h2 {
+            font-size: 20px;
+            border-bottom: 2px solid #77aaff;
+            padding-bottom: 10px;
+        }
+        .form-section form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-section label {
+            font-size: 16px;
+            margin: 10px 0 5px;
+        }
+        .form-section input, .form-section textarea {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-section input[type="submit"] {
+            background: #77aaff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 15px 20px;
+            margin-right: 10px;
+        }
+        .form-section input[type="submit"]:hover {
+            background: #555;
+        }
+        .form-section .back-button {
+            background: #ccc;
+            color: #333;
+            border: none;
+            cursor: pointer;
+            padding: 15px 20px;
+        }
+        .form-section .back-button:hover {
+            background: #999;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Customer Message Report </h1>
+    </header>
+    <div class="container">
+        <section class="form-section">
+            <h2>Submit Your Problem</h2>
+            <form action="report" method="post">
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+                
+                <label for="contact-info">Contact Information:</label>
+                <input type="text" id="contact-info" name="contact-info" required>
+                
+                <label for="problem-description">Problem Description:</label>
+                <textarea id="problem-description" name="problem-description" rows="6" required></textarea>
+                
+                <label for="steps-taken">Steps Taken:</label>
+                <textarea id="steps-taken" name="steps-taken" rows="4" required></textarea>
+                
+               
+                
+                <label for="resolution-plan">Resolution Plan:</label>
+                <textarea id="resolution-plan" name="resolution-plan" rows="4" required></textarea>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+               <input type="submit" value="Submit Report" style="padding: 15px 20px; background: #77aaff; color: white; border: none; cursor: pointer;">
+               <button type="button" class="back-button" onclick="history.back()">Back</button>
+               </div>
+            </form>
+        </section>
+    </div>
+   
+</body>
+</html>

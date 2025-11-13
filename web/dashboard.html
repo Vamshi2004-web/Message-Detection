@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="style_d.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+  <!-- ChatBot Icon (Bottom Right) -->
+  <div id="chatbot-icon" style="position: fixed; bottom: 20px; right: 20px; font-size: 28px; cursor: pointer; z-index: 1000;">
+  <i class="fas fa-robot"></i>
+</div>
+
+
+  <header>
+    <h1 style="color: black;">DASHBOARD</h1>
+    <div class="header-buttons">
+      <button id="contact-btn" onclick="window.location.href='contact.html';">Contact Us</button>
+      <button id="logout-btn" onclick="window.location.href='index_1.html';">Logout</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-container" id="spam-detection">
+      <h2>Message Detection</h2>
+      <a href="http://localhost:8089/">
+        <img src="simg.jpg" alt="Message Detection Image" class="form-image">
+        <button class="detect-btn">Detect Message</button>
+      </a>
+    </section>
+
+    <section class="form-container" id="voice-discussion">
+      <h2>Voice Detection</h2>
+      <img src="vimg.jpg" alt="Voice Discussion Forum Image" class="form-image">
+      <button type="button" onclick="location.href='http://localhost:8087/'">Detect Voice</button>
+    </section>
+
+
+    <section class="form-container" id="report-detection">
+      <h2>URL Detection</h2>
+      <a href="http://localhost:8085/">
+        <img src="rimg.jpg" alt="URL Detection Image" class="form-image">
+        <button class="detect-btn">Detect URL</button>
+      </a>
+    </section>
+
+    <section class="form-container" id="forum-discussion">
+      <h2>Report Us</h2>
+      <form action="report.html" method="post">
+        <img src="fimg.jpg" alt="Discussion Forum Image" class="form-image">
+        <button type="submit">Report</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Chatbot Panel (Hidden by default) -->
+  <div id="chatbot-container" class="hidden" style="position: fixed; bottom: 70px; right: 20px; width: 300px; background: white; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div id="chatbot-header" style="background: #007bff; color: white; padding: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; display: flex; justify-content: space-between; align-items: center;">
+      <span>ChatBot</span>
+      <button id="close-btn" style="background: transparent; border: none; color: white; font-size: 16px; cursor: pointer;">&times;</button>
+    </div>
+    <div id="chatbot-body" style="padding: 10px; height: 200px; overflow-y: auto;">
+      <div id="chatbot-messages"></div>
+    </div>
+    <div id="chatbot-input-container" style="display: flex; padding: 10px; border-top: 1px solid #eee;">
+      <input type="text" id="chatbot-input" placeholder="Type a message" style="flex: 1; padding: 5px;" />
+      <button id="send-btn" style="margin-left: 5px;">Send</button>
+    </div>
+  </div>
+
+
+  <script src="dashboard.js" defer></script>
+  <script src="script_1.js" defer></script>
+</body>
+</html>

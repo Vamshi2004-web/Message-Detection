@@ -1,0 +1,87 @@
+/* style.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('picture3.jpg'); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-right: 100px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#logout-btn {
+  background-color: #1b58c0;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+ 
+}
+
+#logout-btn:hover {
+  background-color: green !important;
+  color: white !important;
+}
+
+
+
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 70px;
+  padding: 70px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px; /* Add rounded corners to the form container */
+}
+
+.form-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px; /* Add rounded corners to the image */
+}
+
+button {
+  background-color: #1b58c0;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
